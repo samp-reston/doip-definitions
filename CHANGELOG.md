@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.0.0](https://github.com/samp-reston/doip-definitions/compare/v2.0.1...v3.0.0) - 2025-02-11
+
+### Other
+
+- move DoipPayload trait to base crate
+
 ## [2.0.0](https://github.com/samp-reston/doip-definitions/compare/v1.0.3...v2.0.0) - 2025-02-10
 
 ### Other
