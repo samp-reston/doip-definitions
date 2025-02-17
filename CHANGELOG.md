@@ -7,6 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.0.0](https://github.com/samp-reston/doip-definitions/compare/v2.0.1...v3.0.0) - 2025-02-17
+
+### Other
+
+- remove old 3.0.0 notes
+- allow module name repetitions
+- added new consts to reduce lines of code
+- auto clippy fixes
+- implement from and try_from for all structs
+- move DoipPayload trait to base crate
+
 ## [2.0.0](https://github.com/samp-reston/doip-definitions/compare/v1.0.3...v2.0.0) - 2025-02-10
 
 ### Other
