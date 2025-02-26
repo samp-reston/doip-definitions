@@ -7,6 +7,29 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.0.0](https://github.com/samp-reston/doip-definitions/compare/v2.0.1...v3.0.0) - 2025-02-26
+
+### Other
+
+- remove all encode decode
+- remove
+- remove encode decode
+- decision to move back to to/from_bytes
+- coverage
+- clippy fixes
+- attempt payload coverage
+- add tests for full coverage
+- remove old 3.0.0 notes
+- allow module name repetitions
+- added new consts to reduce lines of code
+- auto clippy fixes
+- implement from and try_from for all structs
+- move DoipPayload trait to base crate
+
+### Removed
+
+- removed bad docs
+
 ## [2.0.0](https://github.com/samp-reston/doip-definitions/compare/v1.0.3...v2.0.0) - 2025-02-10
 
 ### Other
