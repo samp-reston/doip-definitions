@@ -7,6 +7,59 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.0.2](https://github.com/samp-reston/doip-definitions/compare/v3.0.1...v3.0.2) - 2025-03-02
+
+### Fixed
+
+- fix html tags
+- fix eof
+
+### Other
+
+- add partialeq to message
+- add bindings for python dev
+- flesh out defaults
+- set default templates
+- add templates
+- remove sphinx
+- test sphinx
+- add VENV_DIR: "venv"
+- spin up venv
+- test new job
+- test different pip installs
+- debug pipeline
+- uv venv
+- add build-essential
+- target uv image
+- remove pip install
+- add source
+- image rust and install uv
+- add cargo to path
+- remove interactive
+- correct spacing
+- apt update
+- add curl
+- add before install cargo and rustup
+- add uv iamge
+- try before script on pipeline
+- local test of pipeline
+- add not test to bindings module
+- test new pipeline with uv support
+- add pyproject details
+- remove sample test, reorder pipeline, add support for uv
+- add more args to tarpaulin
+- add image to lint
+- add test module
+- remove duplicate coverage
+- add more tests lints and coverage report
+- change name to pages
+- change lib name
+- echo html into public index
+- change mv target
+- update docs pipeline
+- add cargo docs stage
+- add base rust
+
 ## [3.0.0](https://github.com/samp-reston/doip-definitions/compare/v2.0.1...v3.0.0) - 2025-02-26
 
 ### Other
