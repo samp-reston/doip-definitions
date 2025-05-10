@@ -1,6 +1,6 @@
 [package]
 name = "doip-definitions"
-version = "3.0.6"
+version = "3.0.7"
 authors = ["Samuel Preston <samp.reston@outlook.com>"]
 edition = "2021"
 description = "A Diagnostics over Internet Protocol (DoIP) definition library for use in DoIP applications."

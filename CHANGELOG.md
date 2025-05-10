@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.0.7](https://github.com/samp-reston/doip-definitions/compare/v3.0.6...v3.0.7) - 2025-05-10
+
+### Other
+
+- fix doc
+- Merge branch 'main' of https://github.com/samp-reston/doip-definitions
+- add DoIP message to exposed API
+
 ## [3.0.6](https://github.com/samp-reston/doip-definitions/compare/v3.0.5...v3.0.6) - 2025-05-10
 
 ### Other
