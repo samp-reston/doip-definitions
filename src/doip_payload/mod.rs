@@ -35,18 +35,6 @@ pub use vehicle_identification_request::*;
 pub use vehicle_identification_request_eid::*;
 pub use vehicle_identification_request_vin::*;
 
-// -- Public
-
-pub mod action_code;
-pub mod activation_code;
-pub mod activation_type;
-pub mod diagnostic_ack;
-pub mod diagnostic_nack;
-pub mod nack_code;
-pub mod node_type;
-pub mod power_mode;
-pub mod sync_status;
-
 // endregion:      --- Modules
 
 /// Implemented across `DoIP` Payload Types for consistent encoding and decoding of buffers.

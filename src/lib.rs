@@ -47,23 +47,18 @@ mod doip_payload;
 /// This module contains the relevant structs, enums, and traits for developers
 /// to create custom headers.
 pub mod header {
-    pub use crate::doip_header::payload_type::*;
-    pub use crate::doip_header::version::*;
     pub use crate::doip_header::DoipHeader;
+    pub use automotive_diag::doip::{PayloadType, ProtocolVersion};
 }
 
 /// Contains message data structures and internal payload type dependant structures.
 pub mod payload {
-    pub use crate::doip_payload::action_code::*;
-    pub use crate::doip_payload::activation_code::*;
-    pub use crate::doip_payload::activation_type::*;
-    pub use crate::doip_payload::diagnostic_ack::*;
-    pub use crate::doip_payload::diagnostic_nack::*;
-    pub use crate::doip_payload::nack_code::*;
-    pub use crate::doip_payload::node_type::*;
-    pub use crate::doip_payload::power_mode::*;
-    pub use crate::doip_payload::sync_status::*;
     pub use crate::doip_payload::DoipPayload;
+
+    pub use automotive_diag::doip::{
+        ActionCode, ActivationCode, ActivationType, DiagnosticAckCode, DiagnosticNackCode,
+        NackCode, NodeType, PowerMode, SyncStatus,
+    };
 
     pub use crate::doip_payload::alive_check_request::*;
     pub use crate::doip_payload::alive_check_response::*;
