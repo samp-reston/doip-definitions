@@ -1,5 +1,4 @@
-use payload_type::PayloadType;
-use version::ProtocolVersion;
+use automotive_diag::doip::{PayloadType, ProtocolVersion};
 
 /// The definitive fields of a `DoIP` frame.
 ///
@@ -30,6 +29,3 @@ pub struct DoipHeader {
     /// This tells the parser how many bytes to expect after the header.
     pub payload_length: u32,
 }
-
-pub mod payload_type;
-pub mod version;

@@ -28,14 +28,15 @@ name = "doip_definitions"
 crate-type = ["cdylib", "rlib"]
 
 [dependencies]
-pyo3 = { version = "0.24.2", features = [
+automotive_diag = { version = "0.1.15" , default-features = false, features = ["doip"]}
+pyo3 = { version = "0.25.0", features = [
   "abi3-py311",
   "extension-module",
 ], optional = true }
 
 [features]
 default = ["std"] # Enable std by default
-std = ["pyo3"]    # Enable std and pyo3 when building for Python
+std = ["pyo3", "automotive_diag/pyo3"]    # Enable std and pyo3 when building for Python
 
 [package.metadata]
 rust-analyzer = { checkOnSave.extraArgs = ["--check-cfg", "cfg(rust_analyzer)"] }
