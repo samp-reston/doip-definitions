@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.0.11](https://github.com/samp-reston/doip-definitions/compare/v3.0.10...v3.0.11) - 2025-05-28
+
+### Other
+
+- convert to vec if std
+
 ## [3.0.10](https://github.com/samp-reston/doip-definitions/compare/v3.0.9...v3.0.10) - 2025-05-28
 
 ### Other
