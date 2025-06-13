@@ -2,7 +2,7 @@ use crate::error::{Error, Result};
 
 /// Used in `PowerInformationResponse`, `PowerMode` provides the power mode that
 /// the `DoIP` entity can be.
-#[cfg_attr(feature = "std", pyo3::pyclass(eq, eq_int))]
+#[cfg_attr(feature = "python-bindings", pyo3::pyclass(eq, eq_int))]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum PowerMode {
     /// Not Ready

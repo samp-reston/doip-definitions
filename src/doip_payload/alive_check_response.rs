@@ -4,7 +4,7 @@ use crate::error::{Error, Result};
 /// Confirmation of the `AliveCheckRequest`.
 ///
 /// The typical response from an `AliveCheckRequest`.
-#[cfg_attr(feature = "std", pyo3::pyclass)]
+#[cfg_attr(feature = "python-bindings", pyo3::pyclass)]
 #[derive(Copy, Clone, Debug, PartialEq)]
 pub struct AliveCheckResponse {
     /// The source address of the responding `DoIP` Entity

@@ -7,7 +7,7 @@ use crate::{
 ///
 /// This is found usually when a critical error occurs due to a bad `DoIP` packet
 /// or an entity issue.
-#[cfg_attr(feature = "std", pyo3::pyclass)]
+#[cfg_attr(feature = "python-bindings", pyo3::pyclass)]
 #[derive(Copy, Clone, Debug, PartialEq)]
 pub struct GenericNack {
     /// Available negative acknowledgement codes

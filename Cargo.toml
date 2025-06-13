@@ -36,7 +36,8 @@ pyo3 = { version = "0.24.2", features = [
 
 [features]
 default = ["std"] # Enable std by default
-std = ["pyo3"]    # Enable std and pyo3 when building for Python
+std = []    
+python-bindings = ["dep:pyo3", "std"] # Enable std and pyo3 when building for Python
 
 [package.metadata]
 rust-analyzer = { checkOnSave.extraArgs = ["--check-cfg", "cfg(rust_analyzer)"] }

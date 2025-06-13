@@ -8,7 +8,7 @@ use crate::{
 ///
 /// Usually routing activation is required for `DoipMessage` passing to a `DoIP` server,
 /// the `RoutingActivationRequest` details the activation type required.
-#[cfg_attr(feature = "std", pyo3::pyclass)]
+#[cfg_attr(feature = "python-bindings", pyo3::pyclass)]
 #[derive(Copy, Clone, Debug, PartialEq)]
 pub struct RoutingActivationRequest {
     /// Source address of the requesting entity

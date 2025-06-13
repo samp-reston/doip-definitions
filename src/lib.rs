@@ -98,8 +98,8 @@ pub mod message {
 
 // endregion:      --- Modules
 
-// Python bindings (only available when std is enabled)
-#[cfg(feature = "std")]
+// Python bindings (only available when python-bindings is enabled)
+#[cfg(feature = "python-bindings")]
 #[cfg(any(not(test), rust_analyzer))]
 mod bindings;
 

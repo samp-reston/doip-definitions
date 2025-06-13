@@ -12,7 +12,7 @@ use crate::{
 ///
 /// The positive response to a `VehicleIdentificationRequest[EID/VIN]` request
 /// containing the vehicle information from the `DoIP` entity.
-#[cfg_attr(feature = "std", pyo3::pyclass)]
+#[cfg_attr(feature = "python-bindings", pyo3::pyclass)]
 #[derive(Copy, Clone, Debug, PartialEq)]
 pub struct VehicleAnnouncementMessage {
     /// Vehicle Identification Number

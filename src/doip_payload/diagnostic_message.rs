@@ -81,7 +81,6 @@ impl<const N: usize> From<DiagnosticMessage<N>> for [u8; N] {
     }
 }
 
-
 /// A UDS Message to a specific target address.
 ///
 /// `DiagnosticMessage` is the most utilised payload type due to the amount of actions
@@ -103,7 +102,11 @@ pub struct DiagnosticMessage {
 #[cfg(feature = "std")]
 impl From<DiagnosticMessage> for Vec<u8> {
     fn from(value: DiagnosticMessage) -> Self {
-        let mut buffer = Vec::<u8>::new();
+        let mut buffer =
+            vec![
+                0u8;
+                DOIP_DIAG_COMMON_SOURCE_LEN + DOIP_DIAG_COMMON_TARGET_LEN + value.message.len()
+            ];
 
         let mut offset = 0;
 
