@@ -143,9 +143,7 @@ impl DoipMessageBuilder {
             DoipPayload::PowerInformationResponse(ref pay) => {
                 (PayloadType::PowerInformationResponse, size_of_val(pay))
             }
-            DoipPayload::DiagnosticMessage(ref pay) => {
-                (PayloadType::DiagnosticMessage, size_of_val(pay))
-            }
+            DoipPayload::DiagnosticMessage(ref pay) => (PayloadType::DiagnosticMessage, pay.size()),
             DoipPayload::DiagnosticMessageAck(ref pay) => {
                 (PayloadType::DiagnosticMessageAck, size_of_val(pay))
             }
