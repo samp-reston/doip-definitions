@@ -1,5 +1,6 @@
 // region:      --- Configs
 #![cfg_attr(not(feature = "std"), no_std)] // Use no_std when the "std" feature is disabled
+#![cfg_attr(not(feature = "std"), no_alloc)] // Use no_alloc when the "std" feature is disabled
 #![warn(clippy::pedantic)]
 #![warn(missing_debug_implementations)]
 #![warn(missing_docs)]
