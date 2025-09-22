@@ -20,6 +20,15 @@ pub struct DiagnosticMessage<const N: usize> {
 }
 
 #[cfg(not(feature = "std"))]
+impl<const N: usize> DiagnosticMessage<N> {
+    /// Returns the size of the `DiagnosticMessage` payload in bytes.
+    #[must_use]
+    pub fn size(&self) -> usize {
+        DOIP_DIAG_COMMON_SOURCE_LEN + DOIP_DIAG_COMMON_TARGET_LEN + self.message.len()
+    }
+}
+
+#[cfg(not(feature = "std"))]
 impl<const N: usize> TryFrom<&[u8]> for DiagnosticMessage<N> {
     type Error = Error;
 
@@ -97,6 +106,15 @@ pub struct DiagnosticMessage {
 
     /// Message containing the UDS protocol message
     pub message: Vec<u8>,
+}
+
+#[cfg(feature = "std")]
+impl DiagnosticMessage {
+    /// Returns the size of the `DiagnosticMessage` payload in bytes.
+    #[must_use]
+    pub fn size(&self) -> usize {
+        DOIP_DIAG_COMMON_SOURCE_LEN + DOIP_DIAG_COMMON_TARGET_LEN + self.message.len()
+    }
 }
 
 #[cfg(feature = "std")]

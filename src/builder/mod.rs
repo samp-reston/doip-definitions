@@ -143,9 +143,7 @@ impl DoipMessageBuilder {
             DoipPayload::PowerInformationResponse(ref pay) => {
                 (PayloadType::PowerInformationResponse, size_of_val(pay))
             }
-            DoipPayload::DiagnosticMessage(ref pay) => {
-                (PayloadType::DiagnosticMessage, size_of_val(pay))
-            }
+            DoipPayload::DiagnosticMessage(ref pay) => (PayloadType::DiagnosticMessage, pay.size()),
             DoipPayload::DiagnosticMessageAck(ref pay) => {
                 (PayloadType::DiagnosticMessageAck, size_of_val(pay))
             }
@@ -184,5 +182,35 @@ impl DoipMessageBuilder {
             header: self.header,
             payload: self.payload,
         }
+    }
+}
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use crate::{
+        definitions::{DOIP_DIAG_COMMON_SOURCE_LEN, DOIP_DIAG_COMMON_TARGET_LEN},
+        payload::{DiagnosticMessage, DoipPayload},
+    };
+
+    #[test]
+    fn test_diagnostic_message_payload() {
+        let message = vec![0x01, 0x02, 0x03];
+        let message_length = message.len();
+        let payload = DoipPayload::DiagnosticMessage(DiagnosticMessage {
+            source_address: [0x12, 0x34],
+            target_address: [0x56, 0x78],
+            message,
+        });
+        let builder = DoipMessageBuilder::new().payload(payload);
+        let doip_message = builder.build();
+
+        assert_eq!(
+            doip_message.header.payload_type,
+            PayloadType::DiagnosticMessage
+        );
+        assert_eq!(
+            doip_message.header.payload_length,
+            (DOIP_DIAG_COMMON_SOURCE_LEN + DOIP_DIAG_COMMON_TARGET_LEN + message_length) as u32
+        );
     }
 }
