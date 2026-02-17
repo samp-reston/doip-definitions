@@ -7,6 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.0.14](https://github.com/samp-reston/doip-definitions/compare/v3.0.13...v3.0.14) - 2026-02-17
+
+### Fixed
+
+- payload length of diagnostic message
+- add failing test for diagnostic message length
+
+### Other
+
+- bump version
+
 ## [3.0.13](https://github.com/samp-reston/doip-definitions/compare/v3.0.12...v3.0.13) - 2025-07-06
 
 ### Fixed
